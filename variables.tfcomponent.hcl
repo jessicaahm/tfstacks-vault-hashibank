@@ -74,3 +74,17 @@ variable "eks_clusteradmin_username" {
   type = string
 }
 
+variable "eks_cluster_name" {
+  type = string
+  description = "Name of the EKS cluster from upstream stack"
+}
+
+variable "cluster_endpoint" {
+  type = string
+  description = "EKS cluster endpoint from upstream stack"
+}
+
+variable "cluster_certificate_authority_data" {
+  type = string
+  description = "EKS cluster certificate authority data from upstream stack"
+}
