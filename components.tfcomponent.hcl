@@ -3,9 +3,9 @@ component "vso" {
     source = "./vault-vso"
     
     inputs = {
-        eks_cluster_name = component.eks[each.key].cluster_name
-        cluster_endpoint = component.eks[each.key].cluster_endpoint
-        cluster_certificate_authority_data = component.eks[each.key].cluster_certificate_authority_data
+        eks_cluster_name = var.eks_cluster_name
+        cluster_endpoint = var.cluster_endpoint
+        cluster_certificate_authority_data = var.cluster_certificate_authority_data
     }
     
     providers = {
